@@ -7,6 +7,7 @@
 
 		<link rel="stylesheet" href="reset.css">
 		<link rel="stylesheet" href="produtos.css">
+		<link rel="stylesheet" href="modalProdutos.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	</head>
 	<body>
@@ -45,6 +46,45 @@
 					<p class="produto-preco">R$ 35,00</p>
 				</li>
 			</ul>
+
+			<!-- MODAL -->
+
+			<div class="modal-schedule">
+				<button class="modalButton">Agende um horário conosco</button>
+			</div>
+			<section class="modal-wrapper">
+				<div class="modal">
+					<h2>Agendar horário</h2>
+					
+					<fieldset class="field-modal">
+						<legend>Em que dia prefere ser atendido?</legend>
+						<select class="opcaoModal">
+							<option>Segunda</option>
+							<option>Terça</option>
+							<option>Quarta</option>
+							<option>Quinta</option>
+							<option>Sexta</option>
+						</select>
+						<label for="radio-manha"><input type="radio" name="turno" value="manha" id="radio-manha" checked>Manhã</label>
+						<label for="radio-tarde"><input type="radio" name="turno" value="tarde" id="radio-tarde">Tarde</label>
+						<label for="radio-noite"><input type="radio" name="turno" value="noite" id="radio-noite">Noite</label>
+					</fieldset>
+					
+					<fieldset class="field-modal">
+						<legend>Para qual serviço gostaria de agendar?</legend>
+						<label for="radio-cabelo"><input type="radio" name="servico" value="cabelo" id="radio-cabelo">Cabelo</label>
+						<label for="radio-barba"><input type="radio" name="servico" value="barba" id="radio-barba">Barba</label>
+						<label for="radio-cabelobarba"><input type="radio" name="servico" value="cabelobarba" id="radio-cabelobarba" checked>Cabelo + Barba</label>
+					</fieldset>
+
+					<div class="modalButtons">
+						<a class="agendado" href="/contato.html">
+							<input type="submit" value="Agendar" class="modalButton"></input>
+						</a>
+						<button id="buttonClose" class="modalButton">Cancelar</button>
+					</div>
+				</div>
+			</section>
 		</main>
 
 		<footer>
@@ -52,4 +92,27 @@
 			<p class="copyright">&copy; Copyright Barbearia Alura - 2019</p>
 		</footer>
 	</body>
+
+	<script>
+		const modalWrapper = document.querySelector('.modal-wrapper')
+		const buttonOpen = document.querySelector('.modalButton')
+		const buttonClose = document.getElementById('buttonClose')
+		const agendado = document.querySelector(".agendado")
+
+		function open(){
+        	modalWrapper.classList.add("active");
+    	}
+
+    	function close(){
+        	modalWrapper.classList.remove("active");
+   		}
+
+		function agendar(){
+			alert('Seu horário foi agendado com sucesso!')
+		}
+
+		buttonOpen.addEventListener('click',open);
+		buttonClose.addEventListener('click',close);
+		agendado.addEventListener('click',agendar);
+	</script>
 </html>

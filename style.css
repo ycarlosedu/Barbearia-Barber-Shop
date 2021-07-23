@@ -96,6 +96,7 @@ footer {
 	margin: 20px 0 0;
 }
 
+
 /* Página de contato */
 
 form{
@@ -134,7 +135,7 @@ form label, form legend{
 
 .enviar:hover{
 	background: red;
-	transform: scale(1.2); /*Aumenta 20%*/
+	transform: scale(1.1); /*Aumenta 10%*/
 }
 
 table{
@@ -257,7 +258,7 @@ td, th{
 	margin: 2em auto;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 957px) {
 	.caixa, .conteudo-beneficios, .mapa-conteudo, .video{
 		width: auto;
 	}
@@ -273,6 +274,8 @@ td, th{
 
 	nav{
 		position: static;
+		display: flex;
+		justify-content: center;
 	}
 
 	.lista-beneficios, .imagem-beneficios{

@@ -1,0 +1,89 @@
+.modal-wrapper.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-wrapper{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    background-color: rgba(4,9,17,0.8);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.modal-wrapper .modal{
+    width: min(59rem, 90%);
+    background-color: rgba(255,255,255,0.7);
+    margin: auto;
+    border-radius: .8rem;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 4rem;
+}
+
+.modal-wrapper .modal h2{
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.modal-wrapper .modal legend{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.modal:not(h2){
+    font-size: 1.2rem;
+}
+
+.opcaoModal{
+    width:15%;
+    height: 1.5rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.modal input{
+    margin-top: 1rem;
+}
+
+.modal .modalButton{
+    height: 50px;
+}
+
+@media screen and (max-width: 957px) {
+
+    .modal-wrapper .modal{
+        padding: 1.5rem;
+    }
+
+    .field-modal{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        align-items: center;
+    }
+
+    .opcaoModal{
+        width: 70%;
+    }
+
+    .field-modal legend{
+        font-weight: bold;
+        line-height: 2rem;
+    }
+
+    .modalButtons{
+        padding-bottom: 2rem;
+    }
+
+    .modal input{
+        margin-top: 0.2rem;
+    }
+}
