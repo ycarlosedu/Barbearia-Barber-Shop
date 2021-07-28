@@ -4,8 +4,15 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
 		<title>Barbearia Alura</title>
-		<link rel="stylesheet" href="reset.css">
-		<link rel="stylesheet" href="style.css">
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="styles\reset.css">
+		<link rel="stylesheet" href="styles\style.css">
+		
+		<!-- SCRIPTS -->
+		<script src="scripts/theme.js" defer></script>
+
+		<!-- FONTS -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 	</head>
 
@@ -21,6 +28,13 @@
 						<li><a href="contato.html">Contato</a></li>
 					</ul>
 				</nav>
+				<div class="change-theme">
+					<h2>White / Dark Mode</h2>
+					<div class="toggle">
+						<input id="switch" type="checkbox" name="theme">
+						<label for="switch">Toggle</label>
+					</div>
+				</div>
 			</div>
 		</header>
 		<img class="banner" src="Imgs\banner.jpg">
