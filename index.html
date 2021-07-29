@@ -11,6 +11,7 @@
 		
 		<!-- SCRIPTS -->
 		<script src="scripts/theme.js" defer></script>
+		<script src="scripts/carousel.js" defer></script>
 
 		<!-- FONTS -->
 		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
@@ -37,7 +38,17 @@
 				</div>
 			</div>
 		</header>
-		<img class="banner" src="Imgs\banner.jpg">
+		<div id="banners-wrapper">
+            <button id="back"><</button>
+            <button id="forward">></button>
+            <div id="banners">
+              <div class="banner"><img src="/Imgs/banners/banner.jpg"/></div>
+              <div class="banner"><img src="/Imgs/banners/banner2.jpg"/></div>
+              <div class="banner"><img src="/Imgs/banners/banner3.jpg"/></div>
+              <div class="banner"><img src="/Imgs/banners/banner4.jpg"/></div>
+              <div class="banner"><img src="/Imgs/banners/banner5.jpg"/></div>
+            </div>
+        </div>
 		<main>
 			<section class="principal">
 				<h2 class="titulo-principal">Sobre a Barbearia Alura</h2>
